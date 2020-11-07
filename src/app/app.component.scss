@@ -1,6 +1,72 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
 
+$input-placeholder-font-size:0.6rem;
+$label-font-size:0.5rem;
+$label-color:#4F4F4F;
+$section-title-color: #333333;
+$section-title-size: 0.8rem;
+$light-grey: #828282;
+$b-radius:0.4rem;
+
 *{
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
+}
+
+label{
+  font-size: $label-font-size;
+  color: $label-color;
+  display: block;
+  line-height: 1.2rem;
+  font-weight: 600;
+}
+
+input{
+  display: block;
+  width: 100%;
+  border-radius: $b-radius;
+  padding: 0.5rem;
+  border: 1px solid $light-grey;
+}
+input::placeholder {
+  font-size: $input-placeholder-font-size;
+  font-weight: 500;
+  color: $light-grey;
+}
+
+.form-title{
+  color: #4E5150;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.form__contact-information__title{
+  color: $section-title-color;
+  font-size: $section-title-size;
+  margin: 0 0 0.8rem 0;
+}
+.form__shipping-address__title{
+  color: $section-title-color;
+  font-size: $section-title-size;
+  margin: 3rem 0 0.8rem 0;
+}
+.form__shipping-address__country{
+  display: inline-block;
+
+  input{
+    width: 40%;
+  }
+}
+.form__shipping-address__postal-code{
+  display: inline-block;
+
+  input{
+    width: 40%;
+  }
+}
+.button-submit{
+  background: #F2994A;
+  color: white;
+  border-radius: $b-radius;
+  padding: 0.5rem;
+  border: none;
 }
