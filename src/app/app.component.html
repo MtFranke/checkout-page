@@ -5,10 +5,10 @@
     <section class="form__contact-information" formGroupName="contactInformation">
       <h4 class="form__contact-information__title">Contact information</h4>
       <label>E-mail
-        <input type="text" placeholder="Enter your email..." class="form__contact-information__email">
+        <input type="text" placeholder="Enter your email..." class="form__contact-information__email" formControlName="email">
       </label>
       <label>Phone
-        <input type="text" placeholder="Enter your phone..." class="form__contact-information__phone">
+        <input type="text" placeholder="Enter your phone..." class="form__contact-information__phone" formControlName="phone">
       </label>
     </section>
 
@@ -24,8 +24,9 @@
       <label>City
         <input type="text" placeholder="Your city.." formControlName="city" class="form__shipping-address__city">
       </label>
+
       <label for="country" class="form__shipping-address__country" >Country
-        <select #select name="country" id="country" (change)="changeColor()" class="form__shipping-address__country--input">
+        <select #select name="country" id="country" (change)="changeColor()" class="form__shipping-address__country--input" formControlName="country">
           <option value="" selected disabled hidden>Your country..</option>
           <option *ngFor="let country of countries" [value]="country">{{country}}</option>
         </select>
@@ -36,7 +37,7 @@
       </label>
 
       <div class="form__shipping-address__next-time">
-        <input type="checkbox" id="check" class="form__shipping-address__next-time_checkbox" formControlName="saveForNextTime">
+        <input type="checkbox" id="check" class="form__shipping-address__next-time_checkbox">
         <label for="check" class="form__shipping-address__next-time_label">Save this information for next time</label>
       </div>
 
