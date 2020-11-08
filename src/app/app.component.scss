@@ -7,6 +7,7 @@ $section-title-color: #333333;
 $section-title-size: 0.8rem;
 $light-grey: #828282;
 $b-radius:0.4rem;
+$icon-padding:0.5rem;
 
 *{
   font-family: 'Montserrat', sans-serif;
@@ -22,15 +23,19 @@ label{
 }
 
 input{
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  background-position: $icon-padding;
+  padding: $icon-padding 0  $icon-padding $icon-padding*2;
   display: block;
   width: 100%;
   border-radius: $b-radius;
-  padding: 0.5rem;
   border: 1px solid $light-grey;
 }
 input::placeholder {
   font-size: $input-placeholder-font-size;
   font-weight: 500;
+  text-indent: 1rem;
   color: $light-grey;
 }
 
@@ -49,9 +54,33 @@ input::placeholder {
   font-size: $section-title-size;
   margin: 3rem 0 0.8rem 0;
 }
+
+.form__contact-information__email{
+  background-image: url("../assets/email.png");
+}
+.form__contact-information__phone{
+  background-image: url("../assets/phone.png");
+}
+.form__shipping-address__full-name{
+  background-image: url("../assets/account.png");
+}
+.form__shipping-address__address{
+  background-image: url("../assets/home.png");
+}
+.form__shipping-address__city{
+  background-image: url("../assets/city.png");
+}
+.form__shipping-address__country--input{
+  background-image: url("../assets/earth.png");
+}
+.form__shipping-address__postal-code--input {
+  background-image: url("../assets/briefcase.png");
+
+}
 .form__shipping-address__country{
   display: inline-block;
   width: 48%;
+
 }
 .form__shipping-address__postal-code{
   display: inline-block;
@@ -78,3 +107,4 @@ input::placeholder {
   border: none;
   display: block;
 }
+
