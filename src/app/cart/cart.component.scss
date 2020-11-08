@@ -1,0 +1,104 @@
+$special-price-font-size: 1rem;
+
+.cart{
+  background-color: #F2F2F2;
+  width: 100%;
+  height: 20rem;
+  margin-top: 30%;
+}
+.cart__item {
+  padding: 1rem;
+  display: flex;
+}
+.cart__item__name {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #4E5150;
+}
+.cart__item__information{
+  margin: 0 1rem;
+  position: relative;
+}
+.cart__item__special-price{
+  color: #F2994A;
+  font-size: $special-price-font-size;
+  font-weight: 600;
+}
+.cart__item__price{
+  font-size: $special-price-font-size/1.3;
+  align-self: flex-start;
+  margin-left: 0.5rem;
+  text-decoration: line-through;
+}
+
+.cart__item__calc{
+  border: 1px solid #828282;
+  border-radius: 0.8rem;
+  align-self: flex-end;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0.5rem;
+}
+
+.cart__item__calc--increase{
+  justify-self: flex-end;
+}
+.cart__item__calc--decrease{
+  justify-self: flex-start;
+}
+.cart__item_image{
+  width: 8rem;
+  height: 8rem;
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
+  border-radius: 2rem;
+}
+.cart__item_image-backpack{
+  background-image: url("../../assets/61lN0Yrm-XL._AC_SL1001_.jpg");
+}
+.cart__item_image-shoes{
+  background-image: url("../../assets/shoes.jpeg");
+}
+
+.cart__item__special-price{
+  display: inline;
+}
+.cart__item__price{
+  display: inline;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.count{
+  font-size: 1rem;
+  color: #333333;
+}

@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 
 @Component({
@@ -9,6 +9,8 @@ import {FormControl, FormGroup} from '@angular/forms';
 export class AppComponent implements OnInit{
   title = 'checkout-page';
   checkoutFormGroup: FormGroup;
+  countries: string[] = ['Poland', 'German', 'France'];
+  @ViewChild('select') selectEl: ElementRef;
 
   ngOnInit(): void {
     this.checkoutFormGroup = new FormGroup({
@@ -26,8 +28,12 @@ export class AppComponent implements OnInit{
       }),
     });
   }
-
   onSubmit(): void {
     console.log(this.checkoutFormGroup);
   }
+
+  changeColor(): void{
+    this.selectEl.nativeElement.style.color = 'black';
+  }
+
 }

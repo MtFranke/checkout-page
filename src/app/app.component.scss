@@ -15,6 +15,7 @@ $text-indent: 1rem;
   box-sizing: border-box;
 }
 
+
 label{
   font-size: $label-font-size;
   color: $label-color;
@@ -35,7 +36,6 @@ input{
   text-indent: $text-indent;
   font-size: $input-placeholder-font-size * 1.2;
   font-weight: 500;
-
 
 }
 input::placeholder {
@@ -79,6 +79,25 @@ input::placeholder {
 .form__shipping-address__country--input{
   background-image: url("../assets/earth.png");
 }
+
+select
+{
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  background-position: $icon-padding;
+  padding: $icon-padding 0  $icon-padding $icon-padding*2;
+  display: block;
+  width: 100%;
+  border-radius: $b-radius;
+  border: 1px solid $light-grey;
+  text-indent: $text-indent;
+  font-size: $input-placeholder-font-size;
+  font-weight: 500;
+  color: $light-grey;
+  height: 35.19px;
+}
+
+
 .form__shipping-address__postal-code--input {
   background-image: url("../assets/briefcase.png");
 
@@ -113,4 +132,13 @@ input::placeholder {
   border: none;
   display: block;
 }
+
+.g{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 10%;
+  grid-column-gap: 15%;
+}
+
+
 

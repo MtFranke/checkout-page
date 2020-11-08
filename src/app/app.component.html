@@ -1,44 +1,47 @@
-<form class="form" [formGroup]="checkoutFormGroup" (ngSubmit)="onSubmit()">
-  <h1 class="form-title">Checkout</h1>
-  <section class="form__contact-information" formGroupName="contactInformation">
-  <h4 class="form__contact-information__title">Contact information</h4>
-    <label>E-mail
-      <input type="text" placeholder="Enter your email..." class="form__contact-information__email">
-    </label>
-    <label>Phone
-      <input type="text" placeholder="Enter your phone..." class="form__contact-information__phone">
-    </label>
-  </section>
+
+<main class="g">
+  <form class="form" [formGroup]="checkoutFormGroup" (ngSubmit)="onSubmit()">
+    <h1 class="form-title">Checkout</h1>
+    <section class="form__contact-information" formGroupName="contactInformation">
+      <h4 class="form__contact-information__title">Contact information</h4>
+      <label>E-mail
+        <input type="text" placeholder="Enter your email..." class="form__contact-information__email">
+      </label>
+      <label>Phone
+        <input type="text" placeholder="Enter your phone..." class="form__contact-information__phone">
+      </label>
+    </section>
 
 
-  <section class="form__shipping-address" formGroupName="shippingAddress">
-    <h4 class="form__shipping-address__title">Shipping address</h4>
-    <label>Full name
-      <input type="text" placeholder="Your full name.." formControlName="fullName" class="form__shipping-address__full-name">
-    </label>
-    <label>Address
-      <input type="text" placeholder="Your address.." formControlName="address" class="form__shipping-address__address">
-    </label>
-    <label>City
-      <input type="text" placeholder="Your city.." formControlName="city" class="form__shipping-address__city">
-    </label>
-    <label class="form__shipping-address__country">Country
-      <input type="text" placeholder="Your country.." formControlName="country" class="form__shipping-address__country--input">
-    </label>
-    <label class="form__shipping-address__postal-code">Postal code
-      <input type="text" placeholder="Your postal code.." formControlName="postalCode" class="form__shipping-address__postal-code--input">
-    </label>
+    <section class="form__shipping-address" formGroupName="shippingAddress">
+      <h4 class="form__shipping-address__title">Shipping address</h4>
+      <label>Full name
+        <input type="text" placeholder="Your full name.." formControlName="fullName" class="form__shipping-address__full-name">
+      </label>
+      <label>Address
+        <input type="text" placeholder="Your address.." formControlName="address" class="form__shipping-address__address">
+      </label>
+      <label>City
+        <input type="text" placeholder="Your city.." formControlName="city" class="form__shipping-address__city">
+      </label>
+      <label for="country" class="form__shipping-address__country" >Country
+        <select #select name="country" id="country" (change)="changeColor()" class="form__shipping-address__country--input">
+          <option value="" selected disabled hidden>Your country..</option>
+          <option *ngFor="let country of countries" [value]="country">{{country}}</option>
+        </select>
+      </label>
 
-    <div class="form__shipping-address__next-time">
-      <input type="checkbox" id="check" class="form__shipping-address__next-time_checkbox" formControlName="saveForNextTime">
-      <label for="check" class="form__shipping-address__next-time_label">Save this information for next time</label>
-    </div>
+      <label class="form__shipping-address__postal-code">Postal code
+        <input type="text" placeholder="Your postal code.." formControlName="postalCode" class="form__shipping-address__postal-code--input">
+      </label>
 
-    <button class="button-submit" type="submit">Continue</button>
-  </section>
-</form>
-<section class="cart">
-  <div style="background-color: black">
+      <div class="form__shipping-address__next-time">
+        <input type="checkbox" id="check" class="form__shipping-address__next-time_checkbox" formControlName="saveForNextTime">
+        <label for="check" class="form__shipping-address__next-time_label">Save this information for next time</label>
+      </div>
 
-  </div>
-</section>
+      <button class="button-submit" type="submit">Continue</button>
+    </section>
+  </form>
+  <app-cart></app-cart>
+</main>
