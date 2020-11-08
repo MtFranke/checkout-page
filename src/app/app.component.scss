@@ -51,17 +51,24 @@ input::placeholder {
 }
 .form__shipping-address__country{
   display: inline-block;
-
-  input{
-    width: 40%;
-  }
+  width: 48%;
 }
 .form__shipping-address__postal-code{
   display: inline-block;
-
-  input{
-    width: 40%;
-  }
+  width: 48%;
+  margin-left: 4%;
+}
+.form__shipping-address__next-time{
+  display: flex;
+  min-height: 2rem;
+}
+.form__shipping-address__next-time_checkbox{
+  width: 1rem;
+  height: 1rem;
+  align-self: center;
+}
+.form__shipping-address__next-time_label{
+  align-self: center;
 }
 .button-submit{
   background: #F2994A;
@@ -69,4 +76,5 @@ input::placeholder {
   border-radius: $b-radius;
   padding: 0.5rem;
   border: none;
+  display: block;
 }
