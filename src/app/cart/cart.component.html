@@ -6,9 +6,9 @@
       <p class="cart__item__special-price">$54.99</p>
       <p class="cart__item__price">$94.99</p>
       <div class="cart__item__calc">
-        <i class="material-icons cart__item__calc--decrease">remove</i>
-        <span class="count">1</span>
-        <i class="material-icons cart__item__calc--increase">add</i>
+        <i class="material-icons cart__item__calc--decrease" (click)="onRemoveBackPack()">remove</i>
+        <span class="count">{{backPacks.length}}</span>
+        <i class="material-icons cart__item__calc--increase" (click)="onAddBackPack()">add</i>
       </div>
     </div>
   </section>
@@ -19,9 +19,9 @@
       <p class="cart__item__special-price">$74.99</p>
       <p class="cart__item__price">$124.99</p>
       <div class="cart__item__calc">
-        <i class="material-icons cart__item__calc--decrease">remove</i>
-        <span class="count">1</span>
-        <i class="material-icons cart__item__calc--increase">add</i>
+        <i class="material-icons cart__item__calc--decrease" (click)="onRemoveShoes()">remove</i>
+        <span class="count">{{shoes.length}}</span>
+        <i class="material-icons cart__item__calc--increase" (click)="onAddShoes()">add</i>
       </div>
     </div>
   </section>
@@ -29,12 +29,12 @@
   <div class="line"></div>
   <div class="shipping">
     <p class="shipping__title">Shipping</p>
-    <p class="shipping__price">$19</p>
+    <p class="shipping__price">${{shippingPrice}}</p>
   </div>
 
   <div class="line"></div>
   <div class="total">
     <p class="total__title">Total</p>
-    <p class="total__price">$148.98</p>
+    <p class="total__price">${{totalCost() }}</p>
   </div>
 </section>
