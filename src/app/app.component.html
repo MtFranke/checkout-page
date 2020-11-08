@@ -1,6 +1,6 @@
-<main class="form">
+<form class="form" [formGroup]="checkoutFormGroup" (ngSubmit)="onSubmit()">
   <h1 class="form-title">Checkout</h1>
-  <section class="form__contact-information">
+  <section class="form__contact-information" formGroupName="contactInformation">
   <h4 class="form__contact-information__title">Contact information</h4>
     <label>E-mail
       <input type="text" placeholder="Enter your email...">
@@ -10,32 +10,32 @@
     </label>
   </section>
 
-  <section class="form__shipping-address">
+  <section class="form__shipping-address" formGroupName="shippingAddress">
     <h4 class="form__shipping-address__title">Shipping address</h4>
     <label>Full name
-      <input type="text" placeholder="Your full name..">
+      <input type="text" placeholder="Your full name.." formControlName="fullName">
     </label>
     <label>Address
-      <input type="text" placeholder="Your address..">
+      <input type="text" placeholder="Your address.." formControlName="address">
     </label>
     <label>City
-      <input type="text" placeholder="Your city..">
+      <input type="text" placeholder="Your city.." formControlName="city">
     </label>
     <label class="form__shipping-address__country">Country
-      <input type="text" placeholder="Your country..">
+      <input type="text" placeholder="Your country.." formControlName="country">
     </label>
     <label class="form__shipping-address__postal-code">Postal code
-      <input type="text" placeholder="Your postal code..">
+      <input type="text" placeholder="Your postal code.." formControlName="postalCode">
     </label>
 
     <div class="form__shipping-address__next-time">
-      <input type="checkbox" id="check" class="form__shipping-address__next-time_checkbox">
+      <input type="checkbox" id="check" class="form__shipping-address__next-time_checkbox" formControlName="saveForNextTime">
       <label for="check" class="form__shipping-address__next-time_label">Save this information for next time</label>
     </div>
 
     <button class="button-submit" type="submit">Continue</button>
   </section>
-</main>
+</form>
 <section class="cart">
   <div style="background-color: black">
 
