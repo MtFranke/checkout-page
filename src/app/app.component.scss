@@ -7,7 +7,8 @@ $section-title-color: #333333;
 $section-title-size: 0.8rem;
 $light-grey: #828282;
 $b-radius:0.4rem;
-$icon-padding:0.5rem;
+$icon-padding:0.6rem;
+$text-indent: 1rem;
 
 *{
   font-family: 'Montserrat', sans-serif;
@@ -31,11 +32,16 @@ input{
   width: 100%;
   border-radius: $b-radius;
   border: 1px solid $light-grey;
+  text-indent: $text-indent;
+  font-size: $input-placeholder-font-size * 1.2;
+  font-weight: 500;
+
+
 }
 input::placeholder {
   font-size: $input-placeholder-font-size;
   font-weight: 500;
-  text-indent: 1rem;
+  text-indent: $text-indent;
   color: $light-grey;
 }
 
