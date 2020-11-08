@@ -1,8 +1,10 @@
-$special-price-font-size: 1rem;
+$special-price-font-size: 0.7rem;
 $summary-title: 0.9rem;
 $summary-price:0.7rem;
 $summary-title-weight: 600;
 $summary-price-weight: 500;
+$image-width:5rem;
+$image-height: 5rem;
 
 .cart{
   background-color: #F2F2F2;
@@ -16,7 +18,8 @@ $summary-price-weight: 500;
   display: flex;
 }
 .cart__item__name {
-  margin: 0 0 0.5rem 0;
+  //margin: 0 0 0.4rem 0;
+  margin: 0rem;
   font-size: 0.8rem;
   font-weight: 500;
   color: #4E5150;
@@ -39,15 +42,15 @@ $summary-price-weight: 500;
 
 .cart__item__calc{
   border: 1px solid #828282;
-  border-radius: 0.8rem;
-  align-self: flex-end;
+  border-radius: 0.5rem;
   position: absolute;
   bottom: 0;
-  width: 100%;
+  width: 5rem;
+  height: 1.2rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 0.5rem;
+  padding: 0.2rem;
 }
 
 .cart__item__calc--increase{
@@ -57,12 +60,12 @@ $summary-price-weight: 500;
   justify-self: flex-start;
 }
 .cart__item_image{
-  width: 8rem;
-  height: 8rem;
+  width: $image-width;
+  height:  $image-width;
   background-position: center;
   background-size: cover;
   display: inline-block;
-  border-radius: 2rem;
+  border-radius: 1rem;
 }
 .cart__item_image-backpack{
   background-image: url("../../assets/61lN0Yrm-XL._AC_SL1001_.jpg");
@@ -82,7 +85,7 @@ $summary-price-weight: 500;
   font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
+  font-size: 1rem;  /* Preferred icon size */
   display: inline-block;
   line-height: 1;
   text-transform: none;
@@ -104,7 +107,7 @@ $summary-price-weight: 500;
 }
 
 .count{
-  font-size: 1rem;
+  font-size: 0.7rem;
   color: #333333;
 }
 

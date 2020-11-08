@@ -21,7 +21,6 @@ export class CartComponent implements OnInit {
       price: 94.99,
       superPrice: 54.99
     });
-
     this.shoes.push({
       name: 'Levi Shoes',
       superPrice: 74.99,
