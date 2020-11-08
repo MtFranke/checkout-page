@@ -1,10 +1,15 @@
 $special-price-font-size: 1rem;
+$summary-title: 0.9rem;
+$summary-price:0.7rem;
+$summary-title-weight: 600;
+$summary-price-weight: 500;
 
 .cart{
   background-color: #F2F2F2;
   width: 100%;
-  height: 20rem;
+  height: fit-content;
   margin-top: 30%;
+  position: relative;
 }
 .cart__item {
   padding: 1rem;
@@ -101,4 +106,46 @@ $special-price-font-size: 1rem;
 .count{
   font-size: 1rem;
   color: #333333;
+}
+
+.shipping{
+  display: flex;
+  justify-content: space-between;
+  color: #333333;
+  padding: 0 1rem;
+}
+.shipping__title{
+  font-size: $summary-title;
+  font-weight: $summary-title-weight;
+}
+.shipping__price{
+  font-size: $summary-price;
+  font-weight: $summary-price-weight;
+
+}
+.total{
+  display: flex;
+  justify-content: space-between;
+  color: #333333;
+  padding: 0 1rem;
+}
+.total__title{
+  font-size: $summary-title;
+  font-weight: $summary-title-weight;
+}
+.total__price{
+  font-size: $summary-price;
+  font-weight: $summary-price-weight;
+}
+
+.line{
+  width: 90%;
+  height: 1px;
+  background-color: #BDBDBD;
+  position: absolute;
+  margin: 0 5%;
+}
+
+.space {
+  margin: 20%;
 }
