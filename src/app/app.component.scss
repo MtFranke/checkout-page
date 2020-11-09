@@ -44,7 +44,9 @@ input::placeholder {
   text-indent: $text-indent;
   color: $light-grey;
 }
-
+.form{
+  position: relative;
+}
 .form-title{
   color: #4E5150;
   font-weight: bold;
@@ -114,7 +116,7 @@ select
 }
 .form__shipping-address__next-time{
   display: flex;
-  min-height: 2rem;
+  min-height: 2.5rem;
 }
 .form__shipping-address__next-time_checkbox{
   width: 1rem;
@@ -123,14 +125,18 @@ select
 }
 .form__shipping-address__next-time_label{
   align-self: center;
+  text-indent: 0.5rem;
 }
 .button-submit{
   background: #F2994A;
   color: white;
   border-radius: $b-radius;
-  padding: 0.5rem;
+  padding: 0.8rem 1.5rem;
   border: none;
   display: block;
+  position: absolute;
+  right: 0;
+
 }
 
 .g{
