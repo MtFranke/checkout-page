@@ -33,8 +33,4 @@ export class AppComponent implements OnInit{
     alert(!this.checkoutFormGroup.invalid ? 'form is valid' : 'form is invalid!');
   }
 
-  changeColor(): void{
-    this.selectEl.nativeElement.style.color = 'black';
-  }
-
 }

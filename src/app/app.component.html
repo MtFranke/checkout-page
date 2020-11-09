@@ -1,7 +1,9 @@
 
-<main class="g">
-  <form class="form" [formGroup]="checkoutFormGroup" (ngSubmit)="onSubmit()">
+<main class="grid">
+  <header class="header">
     <h1 class="form-title">Checkout</h1>
+  </header>
+  <form class="form" [formGroup]="checkoutFormGroup" (ngSubmit)="onSubmit()">
     <section class="form__contact-information" formGroupName="contactInformation">
       <h4 class="form__contact-information__title">Contact information</h4>
       <label>E-mail
@@ -26,9 +28,9 @@
       </label>
 
       <label for="country" class="form__shipping-address__country" >Country
-        <select #select name="country" id="country" (change)="changeColor()" class="form__shipping-address__country--input" formControlName="country">
-          <option value="" selected disabled hidden>Your country..</option>
-          <option *ngFor="let country of countries" [value]="country">{{country}}</option>
+        <select #select name="country" id="country" class="form__shipping-address__country--input round" formControlName="country" >
+          <option [ngValue]="null" disabled >Your country..</option>
+          <option  *ngFor="let country of countries" [value]="country">{{country}}</option>
         </select>
       </label>
 
@@ -44,5 +46,8 @@
       <button class="button-submit" type="submit">Continue</button>
     </section>
   </form>
-  <app-cart></app-cart>
+  <app-cart class="cart"></app-cart>
+  <footer class="footer">
+    Mateusz Franke @ DevChallenges.io
+  </footer>
 </main>
