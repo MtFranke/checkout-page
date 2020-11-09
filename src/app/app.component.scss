@@ -55,7 +55,8 @@ input::placeholder {
 .form-title{
   color: #4E5150;
   font-weight: bold;
-  margin: 0;
+  margin-bottom: 0;
+  margin-top: 2%;
 }
 .form__contact-information__title{
   color: $section-title-color;
@@ -87,6 +88,10 @@ input::placeholder {
   background-image: url("../assets/earth.png");
 }
 
+.select-icon{
+  background-image: url("../assets/earth.png");
+
+}
 
 
 select
@@ -97,18 +102,15 @@ select
   width: 100%;
   text-indent: $text-indent;
   height: 2.5rem;
-  color: black;
 
   padding: $icon-padding 0  $icon-padding $icon-padding*2;
   display: block;
   border-radius: $b-radius;
   border: 1px solid $light-grey;
   font-weight: 500;
-  font-size: $input-placeholder-font-size * 1.2;
-
-
-  /* reset */
-
+  color:$light-grey;
+  font-size: $input-placeholder-font-size;
+  cursor: pointer;
   margin: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -118,12 +120,6 @@ select
 }
 
 
-
-select:optional{
-  color: $light-grey;
-  font-size: $input-placeholder-font-size
-
-}
 
 .form__shipping-address__postal-code--input {
   background-image: url("../assets/briefcase.png");
@@ -159,16 +155,14 @@ select:optional{
   padding: 0.8rem 1.5rem;
   border: none;
   display: block;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-
+  margin-left: auto;
 }
 
 .grid{
   display: grid;
+  height: 100vh;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 4fr 1fr ;
+  grid-template-rows: 0.5fr 4fr auto ;
   grid-template-areas:
   "header ."
   "form cart"
@@ -177,15 +171,11 @@ select:optional{
   grid-column-gap: 15%;
 }
 
-.empty{
-  height: 3rem;
-}
-
 @media only screen and (max-width: 800px) {
   .grid{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.2fr 2fr 2.5fr 0.1fr ;
+    grid-template-rows: 0.2fr 2fr 2.5fr auto ;
     grid-template-areas:
     "header header"
     "cart cart"
@@ -207,45 +197,6 @@ select:optional{
   }
 }
 
-
-/* arrows */
-
-select.round {
-  //background-image:
-  //  linear-gradient(45deg, transparent 50%, gray 50%),
-  //  linear-gradient(135deg, gray 50%, transparent 50%),
-  //  radial-gradient(#ddd 70%, transparent 72%);
-  //background-position:
-  //  calc(100% - 20px) calc(1em + 2px),
-  //  calc(100% - 15px) calc(1em + 2px),
-  //  calc(100% - .5em) .5em;
-
-  //background-repeat: no-repeat;
-}
-
-//select.round:focus {
-//  background-image:
-//    linear-gradient(45deg, white 50%, transparent 50%),
-//    linear-gradient(135deg, transparent 50%, white 50%),
-//    radial-gradient(gray 70%, transparent 72%);
-//  background-position:
-//    calc(100% - 15px) 1em,
-//    calc(100% - 20px) 1em,
-//    calc(100% - .5em) .5em;
-//  background-size:
-//    5px 5px,
-//    5px 5px,
-//    1.5em 1.5em;
-//  background-repeat: no-repeat;
-//  outline: 0;
-//}
-
-
-//select:-moz-focusring {
-//  color: transparent;
-//  text-shadow: 0 0 0 #000;
-//}
-
 .cart{
   grid-area: cart;
 }
@@ -253,6 +204,7 @@ select.round {
 .footer{
   text-align: center;
   align-self: end;
+  margin-bottom: 1rem;
   grid-area: footer;
   color: #A9A9A9;
   font-size: 0.6rem;

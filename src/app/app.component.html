@@ -28,7 +28,7 @@
       </label>
 
       <label for="country" class="form__shipping-address__country" >Country
-        <select #select name="country" id="country" class="form__shipping-address__country--input round" formControlName="country" >
+        <select (change)="changeColor()" #select name="country" id="country" class="form__shipping-address__country--input select-icon" formControlName="country" >
           <option [ngValue]="null" disabled >Your country..</option>
           <option  *ngFor="let country of countries" [value]="country">{{country}}</option>
         </select>
@@ -42,8 +42,9 @@
         <input type="checkbox" id="check" class="form__shipping-address__next-time_checkbox">
         <label for="check" class="form__shipping-address__next-time_label">Save this information for next time</label>
       </div>
-        <div class="empty"></div>
-      <button class="button-submit" type="submit">Continue</button>
+      <div>
+        <button class="button-submit" type="submit">Continue</button>
+      </div>
     </section>
   </form>
   <app-cart class="cart"></app-cart>
