@@ -55,7 +55,7 @@ input::placeholder {
 .form-title{
   color: #4E5150;
   font-weight: bold;
-  margin-bottom: 2rem;
+  margin: 0;
 }
 .form__contact-information__title{
   color: $section-title-color;
@@ -161,6 +161,7 @@ select:optional{
   display: block;
   position: absolute;
   right: 0;
+  bottom: 0;
 
 }
 
@@ -172,11 +173,39 @@ select:optional{
   "header ."
   "form cart"
   "footer footer";
-
   padding: 0 10%;
   grid-column-gap: 15%;
 }
 
+.empty{
+  height: 3rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.2fr 2fr 2.5fr 0.1fr ;
+    grid-template-areas:
+    "header header"
+    "cart cart"
+    "form form"
+    "footer footer";
+    padding: 0 10%;
+    grid-column-gap: unset;
+    grid-row-gap: 2%;
+  }
+  .form-title{
+    color: #4E5150;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-top: 2%;
+    margin-bottom: 0;
+  }
+  .footer{
+    align-self: center !important;
+  }
+}
 
 
 /* arrows */
